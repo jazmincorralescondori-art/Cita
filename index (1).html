@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pregunta 💜</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #7b1fa2, #ba68c8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: white;
+}
+
+/* CONTENEDOR */
+.contenedor {
+    max-width: 300px;
+}
+
+/* PREGUNTA */
+h1 {
+    font-size: 22px;
+}
+
+/* BOTONES */
+.botones {
+    margin-top: 20px;
+    position: relative;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* SI */
+.si {
+    background: #ff80ab;
+    color: white;
+}
+
+/* NO */
+.no {
+    position: absolute;
+    background: #ce93d8;
+    color: white;
+}
+</style>
+</head>
+
+<body>
+
+<div class="contenedor">
+    <h1>¿Quieres ir a comer pollito? </h1>
+
+    <div class="botones">
+        <button class="si" onclick="ir()">Sí 💕</button>
+        <button class="no" id="no">No 😢</button>
+    </div>
+</div>
+
+<script>
+let botonNo = document.getElementById("no");
+
+botonNo.addEventListener("click", () => {
+    let x = Math.random() * 200 - 100;
+    let y = Math.random() * 200 - 100;
+
+    botonNo.style.transform = `translate(${x}px, ${y}px)`;
+});
+
+function ir() {
+    window.location.href = "cita.html";
+}
+</script>
+
+</body>
+</html>
